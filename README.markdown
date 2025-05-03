@@ -38,7 +38,7 @@ This is a RESTful authentication microservice built with Flask, designed to hand
 
 3. **Install Dependencies**:
    ```bash
-   pip install flask flask-sqlalchemy flask-jwt-extended flask-mail twilio passlib itsdangerous python-dotenv
+   pip install -r requirements.txt
    ```
 
 4. **Create the Database**:
