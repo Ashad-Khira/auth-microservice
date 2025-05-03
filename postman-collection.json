@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "886fd66e-2ef9-4ebd-8d4b-b1359428a36d",
+		"name": "Authentication-Microservice",
+		"description": "```\nThis is a RESTful authentication microservice built with Flask, designed to handle user registration, email verification, OTP-based login, password reset, and account updates. It follows RESTful API principles and is intended to be scalable and secure for integration into larger systems.\n\n ```",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30099569"
+	},
+	"item": [
+		{
+			"name": "Register-User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Ashad\",\r\n    \"last_name\": \"Khira\",\r\n    \"email\": \"vcard.ashad.khira@gmail.com\",\r\n    \"phone_number\": \"9316592440\",\r\n    \"password\": \"Ashad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login-using-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone_number\": \"9316592440\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/send-login-otp"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone_number\": \"9316592440\",\r\n    \"otp\": \"761270\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0NjI4OTgyNCwianRpIjoiMmE4OTMxMTAtNTljOC00ZDgxLWEwOWItODQyZmE4YjcxNTIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFzaGFkX2toaXJhIiwibmJmIjoxNzQ2Mjg5ODI0LCJjc3JmIjoiMWJlNjdkM2UtOTJhOC00MWE2LTk5N2MtNzQ5NDg4N2RmYjJhIiwiZXhwIjoxNzQ2MjkwNzI0fQ.ZJttium6BARXQTQkpYvzmbwa6cuHBVIZwO0ew47d5W8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"last_name\": \"Sumra\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/update-account"
+			},
+			"response": []
+		}
+	]
+}
