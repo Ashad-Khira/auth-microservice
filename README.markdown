@@ -38,7 +38,7 @@ This is a RESTful authentication microservice built with Flask, designed to hand
 
 3. **Install Dependencies**:
    ```bash
-   pip install flask flask-sqlalchemy flask-jwt-extended flask-mail twilio passlib itsdangerous
+   pip install flask flask-sqlalchemy flask-jwt-extended flask-mail twilio passlib itsdangerous python-dotenv
    ```
 
 4. **Create the Database**:
@@ -96,7 +96,7 @@ load_dotenv()
    The server starts on `http://localhost:5000` in debug mode.
 
 2. **Interact with the API**:
-   Use tools like [Postman](https://www.postman.com) or `curl` to send requests to the API endpoints.
+   Send requests to the API endpoints using tools like [Postman](https://www.postman.com) or `curl`.
 
 3. **Example Workflow**:
    - Register a user (`POST /register`).
