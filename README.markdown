@@ -195,4 +195,4 @@ Contributions are welcome! Please follow these steps:
 5. Open a pull request.
 
 ## Postman Collection
-Here is the Postman Collection to test this projects API Endpoints. See the [Postman Collection](postman-collection) file for details.
+Here is the Postman Collection to test this project's API Endpoints. See the [Postman Collection](postman-collection.json) file for details.
